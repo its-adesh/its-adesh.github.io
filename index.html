@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Aadesh Baral's business analytics portfolio. Explore banking and e-commerce projects using SQL, Python, Power BI, and Tableau.">
-  <title>Aadesh Baral | Business Analytics</title>
+        content="Aadesh Baral's business analytics and process improvement portfolio. Explore projects using SQL, Python, Power BI, Tableau, and Lucidchart.">
+  <title>Aadesh Baral | Analytics &amp; Process Improvement</title>
+
   <style>
     :root {
       --background: #f7f8f5;
@@ -16,6 +17,7 @@
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -32,6 +34,7 @@
     }
 
     a { color: var(--accent); }
+
     a:hover { text-decoration-thickness: 2px; }
 
     a:focus-visible {
@@ -45,6 +48,7 @@
       top: -80px;
       background: white;
       padding: 12px;
+      z-index: 10;
     }
 
     .skip-link:focus { top: 12px; }
@@ -151,6 +155,8 @@
       margin-top: 36px;
     }
 
+    .project > * { min-width: 0; }
+
     .project p { color: var(--muted); }
 
     .project figure {
@@ -165,6 +171,17 @@
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    .process-previews {
+      display: grid;
+      gap: 24px;
+    }
+
+    .project .process-preview {
+      height: 340px;
+      object-fit: contain;
+      background: white;
     }
 
     figcaption {
@@ -187,7 +204,7 @@
 
     .skills {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 32px;
       padding: 0;
       list-style: none;
@@ -222,8 +239,13 @@
       }
 
       .hero { padding: 64px 0; }
-      .project, .skills { grid-template-columns: 1fr; }
+
+      .project, .skills {
+        grid-template-columns: 1fr;
+      }
+
       .project { gap: 28px; }
+
       section { padding: 44px 0; }
     }
 
@@ -232,12 +254,14 @@
     }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header>
     <nav class="container" aria-label="Main navigation">
       <a class="name" href="./">Aadesh Baral</a>
+
       <div class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -249,13 +273,17 @@
 
   <main id="main" class="container">
     <div class="hero">
-      <p class="eyebrow">Business analytics portfolio</p>
-      <h1>Understanding data.<br>Informing decisions.</h1>
+      <p class="eyebrow">Analytics &amp; process improvement portfolio</p>
+
+      <h1>Understanding data.<br>Improving processes.</h1>
+
       <p class="intro">
-        I'm Aadesh Baral. I use SQL, Python, Power BI, and Tableau to explore
-        business questions, explain patterns, and turn findings
-        into clear recommendations.
+        I'm Aadesh Baral. I use SQL, Python, Power BI, and Tableau
+        to explore business questions and communicate findings.
+        I also use Lucidchart to map workflows and propose
+        process improvements.
       </p>
+
       <div class="actions">
         <a class="button" href="#projects">Explore my work</a>
         <a href="https://github.com/its-adesh">View my GitHub</a>
@@ -263,13 +291,14 @@
     </div>
 
     <section id="projects" aria-labelledby="projects-title">
-      <p class="eyebrow">Featured project</p>
+      <p class="eyebrow">Featured analytics project</p>
       <h2 id="projects-title">Bank Telemarketing Analytics</h2>
 
       <article class="project">
         <div>
           <p class="tools">Python · Tableau · Customer segmentation</p>
           <h3>Who is likely to subscribe?</h3>
+
           <p>
             I analysed 45,211 bank marketing records to explore
             customer groups and predict term-deposit subscriptions.
@@ -297,9 +326,11 @@
                href="https://public.tableau.com/app/profile/aadesh.baral8088/viz/bank_marketing_dashboard_17913543953770/Dashboard1">
               Explore live dashboard
             </a>
+
             <a href="https://github.com/its-adesh/bank-telemarketing-analytics">
               View project
             </a>
+
             <a href="https://github.com/its-adesh/bank-telemarketing-analytics/blob/main/reports/bank_marketing_case_study.pdf">
               Read case study
             </a>
@@ -311,6 +342,7 @@
             src="https://raw.githubusercontent.com/its-adesh/bank-telemarketing-analytics/main/reports/figures/cluster_subscription_rates.png"
             alt="Subscription rates by cluster: Cluster 0, 22.7%; Cluster 1, 8.8%; Cluster 2, 9.6%; Cluster 3, 15.1%; Cluster 4, 15.3%."
             loading="lazy">
+
           <figcaption>
             Historical subscription rates by customer group.
             The chart displays proportions: 0.227 equals 22.7%.
@@ -322,52 +354,199 @@
     <section id="olist" aria-labelledby="olist-title">
       <p class="eyebrow">E-commerce analytics project</p>
       <h2 id="olist-title">Olist E-Commerce Analytics</h2>
+
       <article class="project">
         <div>
           <p class="tools">PostgreSQL · Power BI · DAX</p>
           <h3>What shapes sales and the delivery experience?</h3>
-          <p>I analysed the Brazilian Olist dataset using SQL and built three Power BI dashboard pages covering sales performance, customer behaviour, and delivery operations.</p>
+
+          <p>
+            I analysed the Brazilian Olist dataset using SQL and built
+            three Power BI dashboard pages covering sales performance,
+            customer behaviour, and delivery operations.
+          </p>
+
           <div class="finding">
             <strong>R$15.42 million in payments from delivered orders</strong>
-            <p>The dataset includes 96,478 delivered orders. Payment totals cover the 96,477 delivered orders with payment records.</p>
+            <p>
+              The dataset includes 96,478 delivered orders.
+              Payment totals cover the 96,477 delivered orders
+              with payment records.
+            </p>
           </div>
-          <p>My analysis explored repeat purchasing and the relationship between delivery delays and customer review scores. I recommended investigating delivery bottlenecks, prioritising regions by both delay rate and order volume, and testing proactive customer communication.</p>
+
+          <p>
+            My analysis explored repeat purchasing and the relationship
+            between delivery delays and customer review scores.
+            I recommended investigating delivery bottlenecks,
+            prioritising regions by both delay rate and order volume,
+            and testing proactive customer communication.
+          </p>
+
           <div class="actions">
-            <a class="button" href="https://github.com/its-adesh/olist-ecommerce-analytics">View project and dashboards</a>
-            <a href="https://github.com/its-adesh/olist-ecommerce-analytics/releases/tag/v1.0">Download Power BI report</a>
-            <a href="https://github.com/its-adesh/olist-ecommerce-analytics/tree/main/sql">Explore SQL scripts</a>
+            <a class="button"
+               href="https://github.com/its-adesh/olist-ecommerce-analytics">
+              View project and dashboards
+            </a>
+
+            <a href="https://github.com/its-adesh/olist-ecommerce-analytics/releases/tag/v1.0">
+              Download Power BI report
+            </a>
+
+            <a href="https://github.com/its-adesh/olist-ecommerce-analytics/tree/main/sql">
+              Explore SQL scripts
+            </a>
           </div>
-          <p>Dashboard screenshots are available in the project. Open the downloadable .pbix report in Power BI Desktop to explore its interactive pages.</p>
+
+          <p>
+            Dashboard screenshots are available in the project.
+            Open the downloadable .pbix report in Power BI Desktop
+            to explore its interactive pages.
+          </p>
         </div>
+
         <figure>
           <a href="https://github.com/its-adesh/olist-ecommerce-analytics/blob/main/screenshots/sales_performance.png">
-            <img src="https://raw.githubusercontent.com/its-adesh/olist-ecommerce-analytics/main/screenshots/sales_performance.png" alt="Olist sales dashboard showing payment totals, delivered orders, monthly trends, and product category sales." loading="lazy">
+            <img
+              src="https://raw.githubusercontent.com/its-adesh/olist-ecommerce-analytics/main/screenshots/sales_performance.png"
+              alt="Olist sales dashboard showing payment totals, delivered orders, monthly trends, and product category sales."
+              loading="lazy">
           </a>
-          <figcaption>Sales Performance dashboard. Click the image for a larger view. The project also includes Customer Analytics and Delivery &amp; Operations dashboards.</figcaption>
+
+          <figcaption>
+            Sales Performance dashboard. Click the image for a larger view.
+            The project also includes Customer Analytics and
+            Delivery &amp; Operations dashboards.
+          </figcaption>
         </figure>
+      </article>
+    </section>
+
+    <section id="loan-process" aria-labelledby="loan-process-title">
+      <p class="eyebrow">Business analysis project</p>
+      <h2 id="loan-process-title">Loan Approval Process Improvement</h2>
+
+      <article class="project">
+        <div>
+          <p class="tools">
+            Lucidchart · As-Is / To-Be · Swimlane mapping
+          </p>
+
+          <h3>Improving document checks and follow-up</h3>
+
+          <p>
+            I mapped an assumed current loan application process
+            and designed a proposed workflow with earlier attachment
+            checks, clear follow-up ownership, and defined document
+            rework loops.
+          </p>
+
+          <div class="finding">
+            <strong>
+              Continue permitted work while documents are outstanding
+            </strong>
+
+            <p>
+              The proposed process allows assessment tasks permitted
+              by approved business rules to continue, while tasks
+              requiring missing documents pause. Final approval
+              remains with an authorised manager.
+            </p>
+          </div>
+
+          <p>
+            The To-Be map separates responsibilities across the
+            Customer, Application System, Loan Officer,
+            Credit Assessment, and Authorised Manager lanes.
+          </p>
+
+          <p>
+            This is a practice scenario. The assumed current process
+            and proposed changes require stakeholder validation,
+            and expected benefits have not been measured.
+          </p>
+
+          <div class="actions">
+            <a class="button"
+               href="https://github.com/its-adesh/loan-approval-process-improvement">
+              View project and process maps
+            </a>
+          </div>
+        </div>
+
+        <div class="process-previews">
+          <figure>
+            <a href="https://github.com/its-adesh/loan-approval-process-improvement/blob/main/loan-application%20%E2%80%94%20As-Is%20Process.png">
+              <img
+                class="process-preview"
+                src="https://raw.githubusercontent.com/its-adesh/loan-approval-process-improvement/main/loan-application%20%E2%80%94%20As-Is%20Process.png"
+                alt="As-Is loan application process showing manual document checks, assessment on hold, follow-up, credit assessment, and manager approval."
+                loading="lazy">
+            </a>
+
+            <figcaption>
+              <strong>As-Is process.</strong>
+              Assumed current workflow with manual document checks
+              and follow-up. Click to enlarge.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <a href="https://github.com/its-adesh/loan-approval-process-improvement/blob/main/loan-application%20%E2%80%94%20To-Be%20Process.png">
+              <img
+                class="process-preview"
+                src="https://raw.githubusercontent.com/its-adesh/loan-approval-process-improvement/main/loan-application%20%E2%80%94%20To-Be%20Process.png"
+                alt="To-Be loan approval process across five swimlanes, including attachment checks, follow-up, replacement document validation, and manager approval."
+                loading="lazy">
+            </a>
+
+            <figcaption>
+              <strong>To-Be process.</strong>
+              Proposed workflow with earlier attachment checks,
+              follow-up responsibility, and permitted assessment tasks.
+              Click to enlarge.
+            </figcaption>
+          </figure>
+        </div>
       </article>
     </section>
 
     <section id="skills" aria-labelledby="skills-title">
       <h2 id="skills-title">Skills used in my work</h2>
+
       <ul class="skills">
         <li>
           <strong>Data analysis</strong>
           <span>
-            SQL and PostgreSQL for relational data analysis; Python, pandas, and NumPy for data preparation and exploration.
+            SQL and PostgreSQL for relational data analysis;
+            Python, pandas, and NumPy for data preparation
+            and exploration.
           </span>
         </li>
+
         <li>
           <strong>Modelling</strong>
           <span>
-            Customer segmentation, classification, model evaluation,
-            and SHAP explanations.
+            Customer segmentation, classification,
+            model evaluation, and SHAP explanations.
           </span>
         </li>
+
         <li>
           <strong>Business communication</strong>
           <span>
-            Power BI, DAX, and Tableau for dashboards, KPI reporting, and recommendations linked to business questions.
+            Power BI, DAX, and Tableau for dashboards,
+            KPI reporting, and recommendations linked
+            to business questions.
+          </span>
+        </li>
+
+        <li>
+          <strong>Business analysis</strong>
+          <span>
+            Lucidchart for As-Is and To-Be process mapping,
+            swimlanes, decision modelling, exception handling,
+            and proposed process improvements.
           </span>
         </li>
       </ul>
@@ -375,18 +554,24 @@
 
     <section id="about" aria-labelledby="about-title">
       <h2 id="about-title">About me</h2>
+
       <p class="about">
-        I'm building my career in business analytics. I enjoy
-        investigating business questions and explaining what the
-        data shows in simple terms. My projects combine analysis
-        with recommendations that a business can test and measure.
+        I'm building my career in business analytics and business
+        analysis. I enjoy investigating business questions,
+        explaining what the data shows, and understanding how
+        processes work. My projects combine data analysis,
+        dashboards, and process mapping with recommendations
+        that a business can validate, test, and measure.
       </p>
+
       <a href="https://github.com/its-adesh">Find me on GitHub</a>
     </section>
   </main>
 
   <footer>
-    <div class="container">Aadesh Baral · Business Analytics Portfolio</div>
+    <div class="container">
+      Aadesh Baral · Analytics &amp; Process Improvement Portfolio
+    </div>
   </footer>
 </body>
 </html>
